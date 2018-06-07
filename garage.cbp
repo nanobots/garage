@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="garage" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/garage" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/garage" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="altaPropietario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="altaPropietario.h" />
+		<Unit filename="bajaPropAutos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bajaPropAutos.h" />
+		<Unit filename="bajaPropietario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bajaPropietario.h" />
+		<Unit filename="egresoAuto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="egresoAuto.h" />
+		<Unit filename="grafico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grafico.h" />
+		<Unit filename="graficoPropietario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="graficoPropietario.h" />
+		<Unit filename="ingresoAuto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ingresoAuto.h" />
+		<Unit filename="ingresoAutoPanta.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ingresoAutoPanta.h" />
+		<Unit filename="lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib.h" />
+		<Unit filename="libAuto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libAutos.h" />
+		<Unit filename="listadoPropietario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listadoPropietario.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menuPantalla.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menuPantalla.h" />
+		<Unit filename="modificarPropietario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modificarPropietario.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
