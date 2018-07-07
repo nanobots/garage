@@ -1,30 +1,30 @@
 # depslib dependency file v1.0
-1528167684 source:c:\nanobots\garage\altapropietario.c
+1530907502 source:c:\nanobots\garage\altapropietario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	"lib.h"
 
-1528167619 c:\nanobots\garage\lib.h
+1530907502 c:\nanobots\garage\lib.h
 
-1526233053 source:c:\nanobots\garage\grafico.c
+1530907502 source:c:\nanobots\garage\grafico.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"grafico.h"
 
-1526233890 c:\nanobots\garage\grafico.h
+1530907502 c:\nanobots\garage\grafico.h
 
-1526617484 source:c:\nanobots\garage\bajapropietario.c
+1530907502 source:c:\nanobots\garage\bajapropietario.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"
 	"bajaPropietario.h"
 
-1526617762 c:\nanobots\garage\bajapropietario.h
+1530907502 c:\nanobots\garage\bajapropietario.h
 
-1528167157 source:c:\nanobots\garage\lib.c
+1530909334 source:c:\nanobots\garage\lib.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -37,24 +37,24 @@
 	"lib.h"
 	"grafico.h"
 
-1526350590 source:c:\nanobots\garage\listadopropietario.c
+1530907502 source:c:\nanobots\garage\listadopropietario.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"
 	"listadoPropietario.h"
 
-1526267087 c:\nanobots\garage\listadopropietario.h
+1530907502 c:\nanobots\garage\listadopropietario.h
 
-1526956959 source:c:\nanobots\garage\main.c
+1530907502 source:c:\nanobots\garage\main.c
 	<string.h>
 	"lib.h"
 	"libAutos.h"
 	"grafico.h"
 	"menuPantalla.h"
 
-1526948315 c:\nanobots\garage\menupantalla.h
+1530907502 c:\nanobots\garage\menupantalla.h
 
-1526350300 source:c:\nanobots\garage\modificarpropietario.c
+1530916233 source:c:\nanobots\garage\modificarpropietario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -62,14 +62,15 @@
 	"lib.h"
 	"modificarPropietario.h"
 
-1526267087 c:\nanobots\garage\modificarpropietario.h
+1530907502 c:\nanobots\garage\modificarpropietario.h
 
-1528167219 source:c:\nanobots\garage\menupantalla.c
+1530915804 source:c:\nanobots\garage\menupantalla.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"
 	"libAutos.h"
 	"altaPropietario.h"
+	"modificarPatente.h"
 	"modificarPropietario.h"
 	"bajaPropietario.h"
 	"listadoPropietario.h"
@@ -78,18 +79,18 @@
 	"ingresoAutoPanta.h"
 	"egresoAuto.h"
 
-1526608404 c:\nanobots\garage\altapropietario.h
+1530907502 c:\nanobots\garage\altapropietario.h
 
 1526267414 c:\nanobots\garage\graficopropietario.h
 
-1526273751 source:c:\nanobots\garage\graficopropietario.c
+1530907502 source:c:\nanobots\garage\graficopropietario.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"lib.h"
 	"grafico.h"
 
-1526950267 source:c:\nanobots\garage\ingresoauto.c
+1530907502 source:c:\nanobots\garage\ingresoauto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -97,11 +98,11 @@
 	"lib.h"
 	"libAutos.h"
 
-1526948495 c:\nanobots\garage\ingresoauto.h
+1530907502 c:\nanobots\garage\ingresoauto.h
 
-1527013571 c:\nanobots\garage\libautos.h
+1530907502 c:\nanobots\garage\libautos.h
 
-1527013558 source:c:\nanobots\garage\libauto.c
+1530907502 source:c:\nanobots\garage\libauto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -110,7 +111,7 @@
 	"libAutos.h"
 	"grafico.h"
 
-1526950299 source:c:\nanobots\garage\ingresoautopanta.c
+1530907502 source:c:\nanobots\garage\ingresoautopanta.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -119,23 +120,33 @@
 	"libAutos.h"
 	"ingresoAutoPanta.h"
 
-1526527486 c:\nanobots\garage\ingresoautopanta.h
+1530907502 c:\nanobots\garage\ingresoautopanta.h
 
-1528167329 source:c:\nanobots\garage\bajapropautos.c
+1530907502 source:c:\nanobots\garage\bajapropautos.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"
 	"libAutos.h"
 	"bajaPropAutos.h"
 
-1526784549 c:\nanobots\garage\bajapropautos.h
+1530907502 c:\nanobots\garage\bajapropautos.h
 
-1528167633 source:c:\nanobots\garage\egresoauto.c
+1530907502 source:c:\nanobots\garage\egresoauto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"lib.h"
 	"libAutos.h"
 
-1526963281 c:\nanobots\garage\egresoauto.h
+1530907502 c:\nanobots\garage\egresoauto.h
+
+1530915580 source:c:\nanobots\garage\modificarpatente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+	"modificarPatente.h"
+
+1530910221 c:\nanobots\garage\modificarpatente.h
 

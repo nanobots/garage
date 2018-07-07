@@ -52,8 +52,8 @@
         int vacio = 0;
         int i;
         for(i=0; i<tampropietario; i++){
-             if (propietario[i].estado != 0){
-                vacio = 1;
+             if (propietario[i].estado == 0){
+                vacio = i;
                 break;
             }
         }
@@ -85,9 +85,10 @@
     int propietarioIdLibre(ePropietario propietario[], int tampropietario){
         int id;
         int i;
+        id=-1;
         for(i=0; i<tampropietario; i++){
-            if (propietario[i].estado == 1){
-                 id=propietario[i].idPropietario+1;
+            if (propietario[i].estado == 0){
+                 id=propietario[i].idPropietario;
             }
         }
         return id;

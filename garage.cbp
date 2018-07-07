@@ -82,6 +82,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="menuPantalla.h" />
+		<Unit filename="modificarPatente.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modificarPatente.h" />
 		<Unit filename="modificarPropietario.c">
 			<Option compilerVar="CC" />
 		</Unit>
