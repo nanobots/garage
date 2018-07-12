@@ -150,3 +150,146 @@
 
 1530910221 c:\nanobots\garage\modificarpatente.h
 
+1530909226 source:c:\nanobots\garage-master\altapropietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+
+1530909226 c:\nanobots\garage-master\lib.h
+
+1531352141 source:c:\nanobots\garage-master\bajapropautos.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	"libAutos.h"
+	"bajaPropAutos.h"
+
+1531355782 c:\nanobots\garage-master\libautos.h
+
+1530909226 c:\nanobots\garage-master\bajapropautos.h
+
+1530909226 source:c:\nanobots\garage-master\bajapropietario.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	"bajaPropietario.h"
+
+1530909226 c:\nanobots\garage-master\bajapropietario.h
+
+1531356427 source:c:\nanobots\garage-master\egresoauto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lib.h"
+	"libAutos.h"
+	"egresoAuto.h"
+
+1530909226 source:c:\nanobots\garage-master\grafico.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"grafico.h"
+
+1530909226 c:\nanobots\garage-master\grafico.h
+
+1530909226 source:c:\nanobots\garage-master\graficopropietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lib.h"
+	"grafico.h"
+
+1531347483 source:c:\nanobots\garage-master\ingresoauto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+	"libAutos.h"
+
+1531351585 source:c:\nanobots\garage-master\ingresoautopanta.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+	"libAutos.h"
+	"ingresoAutoPanta.h"
+
+1530909226 c:\nanobots\garage-master\ingresoautopanta.h
+
+1530909226 source:c:\nanobots\garage-master\lib.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"lib.h"
+	"grafico.h"
+
+1531355725 source:c:\nanobots\garage-master\libauto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"lib.h"
+	"libAutos.h"
+
+1530909226 source:c:\nanobots\garage-master\listadopropietario.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	"listadoPropietario.h"
+
+1530909226 c:\nanobots\garage-master\listadopropietario.h
+
+1531350200 source:c:\nanobots\garage-master\main.c
+	<string.h>
+	"lib.h"
+	"libAutos.h"
+	"grafico.h"
+	"menuPantalla.h"
+
+1530909226 c:\nanobots\garage-master\menupantalla.h
+
+1531354687 source:c:\nanobots\garage-master\menupantalla.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	"libAutos.h"
+	"altaPropietario.h"
+	"modificarPatente.h"
+	"modificarPropietario.h"
+	"bajaPropietario.h"
+	"listadoPropietario.h"
+	"bajaPropAutos.h"
+	"ingresoAuto.h"
+	"ingresoAutoPanta.h"
+	"egresoAuto.h"
+
+1530909226 c:\nanobots\garage-master\altapropietario.h
+
+1530909226 c:\nanobots\garage-master\modificarpatente.h
+
+1530909226 c:\nanobots\garage-master\modificarpropietario.h
+
+1530909226 c:\nanobots\garage-master\ingresoauto.h
+
+1531354249 c:\nanobots\garage-master\egresoauto.h
+
+1531353131 source:c:\nanobots\garage-master\modificarpatente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+	"modificarPatente.h"
+
+1530909226 source:c:\nanobots\garage-master\modificarpropietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"lib.h"
+	"modificarPropietario.h"
+

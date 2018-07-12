@@ -27,11 +27,11 @@
                 case 1:
                     strcpy(auxAutos.patente, ingresoDatoChar("Ingrese patente : ",patente));
                     existe=patenteExiste(autos, tamautos, auxAutos.patente);
-                    if (existe!=-1){
+                    if (existe==-1){
                          ingresoMarcaAutos(auxAutos, propietario, tampropietarios, autos, tamautos);
                         flag=7;
                     }else{
-                        printf("\n\n\t\t\tError - El autos con patente %s ya existe\n",auxAutos.patente);
+                        printf("\n\n\t\t\tError - El autos con patente %d ya existe\n",existe);
                         system("\n\n\t\tpause");
                     }
                     break;
@@ -113,6 +113,7 @@
                 flag=3;
             }else if (opcion==1){
                 posicion=autoLibre(autos,tamautos);
+                autos[posicion].idAutos=posicion;
                 strcpy(autos[posicion].patente, auxAutos.patente);
                 strcpy(autos[posicion].marca, auxAutos.marca);
                 autos[posicion].idPropietario=auxAutos.idPropietario;

@@ -9,7 +9,7 @@
     #include "libAutos.h"
     #include "grafico.h"
     #define TAMPROPIETARIOS 20
-    #define TAMAUTOS 6
+    #define TAMAUTOS 8
     #define TAMFACTURA 10
     #include "menuPantalla.h"
 

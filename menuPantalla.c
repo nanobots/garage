@@ -18,7 +18,7 @@
         int id;
         do{
             int min=1;
-            int max=9;
+            int max=12;
             system("cls");
             printf("\t --------------------------------------------------------------\n");
             printf("\t|               Sistema Propietario - version 1.0.0            |\n");
@@ -84,19 +84,19 @@
                     opcion=-1;
                     break;
                 case 8 :
-                    mostrarListaAutos(autos, tamautos);
+                    mostrarListaAutos(autos, propietario,tamautos,tampropietarios);
                     opcion=-1;
                     break;
                 case 9 :
                     bajaPropAutos(propietario, tampropietarios, autos, tamautos);
-                    opcion=0;
+                    opcion=-1;
                     break;
                 case 10 :
                     egresoAuto(propietario, tampropietarios, autos, tamautos, factura, tamfactura);
-                    opcion=0;
+                    opcion=-1;
                     break;
                 case 11 :
- //                   mostarRecaudacion(propietario, tampropietarios, autos, tamautos, factura, tamfactura);
+                    mostrarRecaudacion(propietario, tampropietarios, autos, tamautos, factura, tamfactura);
                     opcion=0;
                     break;
                case 12 :

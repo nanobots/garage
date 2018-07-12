@@ -3,6 +3,7 @@
     #include <string.h>
     #include "lib.h"
     #include "libAutos.h"
+    #include "egresoAuto.h"
 
     void egresoAuto(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
         eFactura auxFactura;
@@ -22,7 +23,7 @@
                     strcpy(auxFactura.patente, ingresoDatoChar("Ingrese patente : ",patente));
                     auxFactura.posAuto=patenteExiste(autos, tamautos, auxFactura.patente);
                     if (auxFactura.posAuto!=-1){
-//                        grabarFacturaAutos(auxFactura, propietario, tampropietarios, autos, tamautos, factura, tamfactura);
+                        grabarFacturaAutos(auxFactura, propietario, tampropietarios, autos, tamautos, factura, tamfactura);
                         flag=7;
                     }else{
                         printf("\n\n\t\t\tError - El autos con patente %s no existe\n",auxFactura.patente);
@@ -33,6 +34,7 @@
             }while(flag!=7);
     }
    void grabarFacturaAutos(eFactura auxFactura, ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos,eFactura factura[], int tamfactura) {
+
         int opcion=0;
         int flag=1;
         int estadia;

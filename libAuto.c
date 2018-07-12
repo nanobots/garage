@@ -4,7 +4,6 @@
     #include <time.h>
     #include "lib.h"
     #include "libAutos.h"
-    #include "grafico.h"
 
     int autoLibre(eAutos buscar[], int registros){
         int posicion = -1;
@@ -50,9 +49,9 @@
     }
 
      void HardCodeAutos(eAutos autos[], int tamautos){
-        int id[20]= {1,2,3,4,5};
+        int id[20]= {0,1,2,3,4};
         int idPropietario[20] = {1015,1014,1003,1004,1006};
-        char marca[][25]= {"BMW     ","AUDI    ","MERCEDES","TOYOTA  ","OTROS   "};
+        char marca[][25]= {"BMW        ","AUDI       ","ALPHA_ROMEO","TOYOTA     ","OTROS      "};
         char patente[][25] = {"ABD123","DWQ350","PDC990","DBF890","AAA666"};
         int estado[20] = {1,1,1,1,1};
         int i;
@@ -176,13 +175,15 @@
         return dato;
     }
 */
-     void mostrarListaAutos(eAutos autos[], int tamautos) {
+     void mostrarListaAutos(eAutos autos[], ePropietario propietario[], int tamautos,int tampropietarios) {
         int i;
+//        int j;
+//        int idPropietario;
         printf("\n\t-------------------------------------------------------");
-        printf("\n\t\t   Marca           Patente               Id\n");
+        printf("\n\t\t   Marca           Patente     Idauto      idProp\n");
         for(i=0; i<tamautos; i++){
             if(autos[i].estado == 1){
-                 printf("\n\t\t%s           %s         %d", autos[i].patente ,autos[i].marca ,autos[i].idAutos );
+                printf("\n\t\t%s           %s         %d      %d ", autos[i].patente ,autos[i].marca ,autos[i].idAutos,autos[i].idPropietario );
             }
         }
                printf("\n\n\n\n\n.");
@@ -200,15 +201,20 @@
         printf("\n\n\n\n\n.");
      }
 
-    void mostrarRecaudacion(eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
+    void mostrarRecaudacion(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
         int i;
+        float totalGeneral;
         printf("\n\t-------------------------------------------------------");
-        printf("\n\t\t   Marca           Patente\n");
+        printf("\n\t\t    Patente    Marca         Importe    \n");
         for(i=0; i<tamfactura; i++){
-            if(factura[i].estado == 1){
-                 printf("\n\t\t%10s %15s", factura[i].patente, autos[i].marca);
+            if(factura[i].estado == 2){
+                totalGeneral+=factura[i].total;
+                printf("\n\t\t%10s %15s %10f", factura[i].patente, autos[i].marca, factura[i].total);
             }
         }
+        printf("\n\t-------------------------------------------------------");
+        printf("\n\t\t     Total recaudacion :   %10f", totalGeneral);
+        printf("\n\t-------------------------------------------------------");
         printf("\n\n\n\n\n.");
      }
 
@@ -228,13 +234,13 @@ void *ingresoDatoChar1(char *txt, char *nombre){
                 strcpy(nombre,"ALPHA_ROMEO");
                 break;
             case 2:
-                strcpy(nombre,"AUDI");
+                strcpy(nombre,"AUDI       ");
                 break;
             case 3:
-                strcpy(nombre,"FERRARI");
+                strcpy(nombre,"FERRARI    ");
                 break;
             case 4:
-                strcpy(nombre,"OTROS");
+                strcpy(nombre,"OTROS      ");
                 break;
             default :
                 strcpy(nombre,"NULL");

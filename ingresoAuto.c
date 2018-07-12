@@ -86,7 +86,7 @@
                     }else if (opcion==1){
                         strcpy(autos[posicion].patente, auxAutos.patente);
                         strcpy(autos[posicion].marca, auxAutos.marca);
-      //                  strcpy(autos[posicion].patente, auxAutos.patente);
+                        strcpy(autos[posicion].patente, auxAutos.patente);
                         flag=7;
                     }else{
                         flag=7;

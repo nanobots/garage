@@ -33,7 +33,7 @@
                     system("pause");
                 }
             }
-         }while(salir!=0);
+         }while(salir!=1);
        }
 
        void confirmaBajas(ePropietario propietario[], int id, eAutos autos[], int tamautos ){

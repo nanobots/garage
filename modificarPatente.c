@@ -57,7 +57,7 @@
             printf("\t -------------------------------------------------------\n");
             printf("\t|               Modificacion  de patente  1              |\n");
             printf("\t -------------------------------------------------------");
-            int opcion=0;
+ //           int opcion=0;
 
             printf("\n\n\n\t\tPropietario Nro.     : %d",auxPropietario.idPropietario);
             printf("\n\n\t\tNombre               : %s",auxPropietario.nombre);

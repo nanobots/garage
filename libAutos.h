@@ -90,7 +90,7 @@
 
       void mostrarAutosEstacionados(eAutos[], int, eFactura[], int);
 
-      void mostrarRecaudacion(eAutos[], int, eFactura[], int);
+      void mostarRecaudacion(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura);
 
 
      /** \brief  ordena estructura por patente
@@ -127,7 +127,7 @@
       *  \param  Tamaño de la estructura
       *  \return salida por pantalla
     */
-    void mostrarListaAutos(eAutos[], int);
+    void mostrarListaAutos(eAutos[], ePropietario[], int, int);
 
     /** \brief  ingreso de datos tipo int
       *  \param  int
