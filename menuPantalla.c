@@ -18,23 +18,26 @@
         int id;
         do{
             int min=1;
-            int max=12;
+            int max=11;
             system("cls");
             printf("\t --------------------------------------------------------------\n");
             printf("\t|               Sistema Propietario - version 1.0.0            |\n");
             printf("\t --------------------------------------------------------------");
             printf("\n\n\n\t\t\t1- Alta propietario");
             printf("\n\n\t\t\t2- Baja de propietario");
-            printf("\n\n\t\t\t3- Modificacion de patente");
-            printf("\n\n\t\t\t4- Modificacion de propietario");
-            printf("\n\n\t\t\t5- Listado de propietario");
-            printf("\n\n\t\t\t6- ingreso de autos");
-            printf("\n\n\t\t\t7- ingreso de autos panta");
-            printf("\n\n\t\t\t8- listado de autos");
-            printf("\n\n\t\t\t9- baja de propietario con autos");
-            printf("\n\n\t\t\t10- egreso autos");
-            printf("\n\n\t\t\t11- Listado del dia");
-            printf("\n\n\t\t\t12- Salir");
+            printf("\n\n\t\t\t3- Modificacion de propietario");
+//            printf("\n\n\t\t\t5- ingreso de autos");
+            printf("\n\n\t\t\t4- ingreso de autos");
+//            printf("\n\n\t\t\t7- listado de autos");
+//            printf("\n\n\t\t\t8- baja de propietario con autos");
+            printf("\n\n\t\t\t5- egreso autos");
+            printf("\n\n\t\t\t6- Recaudacion del dia");
+            printf("\n\n\t\t\t7- Recaudacion por marca");
+            printf("\n\n\t\t\t8- listado por idPropietario");
+            printf("\n\n\t\t\t9- Propietatios de AUDI");
+            printf("\n\n\t\t\t10- Listado de propietario");
+//            printf("\n\n\t\t\t14- Modificacion de propietario completa");
+            printf("\n\n\t\t\t11- Salir");
             opcion=opcionesMenu("Ingrese una opcion ==> ");
             if (opcion< min || opcion>max){
                 printf("\n\n\t\t\tError - Debe ingresar entre %d y %d", min, max);
@@ -59,21 +62,18 @@
                     modificarPatente(propietario, tampropietarios);
                     opcion=1;
                    break;
+/*
                 case 4 :
-                    ePropietarioVacio(propietario, tampropietarios);
-                    modificarPropietario(propietario, tampropietarios);
-                    opcion=1;
-                    break;
-                case 5 :
                     ePropietarioVacio(propietario, tampropietarios);
                     listadoPropietario(propietario, tampropietarios);
                     opcion=-1;
                     break;
-                case 6 :
-                    ingresoAuto(propietario, tampropietarios, autos, tamautos);
-                    opcion=-1;
-                    break;
-                case 7 :
+ */
+ //           case 5 :
+ //                   ingresoAuto(propietario, tampropietarios, autos, tamautos);
+ //                   opcion=-1;
+//                    break;
+            case 4 :
                     id=autoLibre(autos,tamautos);
                     if(id!=-1){
                         ingresoAutoPanta(propietario, tampropietarios, autos, tamautos);
@@ -83,23 +83,45 @@
                     }
                     opcion=-1;
                     break;
-                case 8 :
-                    mostrarListaAutos(autos, propietario,tamautos,tampropietarios);
-                    opcion=-1;
-                    break;
-                case 9 :
-                    bajaPropAutos(propietario, tampropietarios, autos, tamautos);
-                    opcion=-1;
-                    break;
-                case 10 :
+//            case 7 :
+ //                   mostrarListaAutos(autos, propietario,tamautos,tampropietarios);
+ //                   opcion=-1;
+ //                   break;
+ //           case 8 :
+ //                   bajaPropAutos(propietario, tampropietarios, autos, tamautos);
+ //                   opcion=-1;
+ //                   break;
+            case 5 :
                     egresoAuto(propietario, tampropietarios, autos, tamautos, factura, tamfactura);
                     opcion=-1;
                     break;
-                case 11 :
+            case 6 :
                     mostrarRecaudacion(propietario, tampropietarios, autos, tamautos, factura, tamfactura);
-                    opcion=0;
+                    opcion=-1;
                     break;
-               case 12 :
+            case 7 :
+                    recaudacionPorMarca(propietario, tampropietarios,autos, tamautos, factura, tamfactura);
+                    opcion=-1;
+                    break;
+            case 8 :
+                    id=ePropietarioVacio(propietario, tampropietarios);
+                    listarPorIdPropietario(propietario, tampropietarios, autos, tamautos,id);
+                    opcion=1;
+                    break;
+            case 9 :
+                    listarPropietariosAudi(propietario, tampropietarios, autos, tamautos);
+                    opcion=-1;
+                    break;
+            case 10 :
+                    listarPropietariosAudi(propietario, tampropietarios, autos, tamautos);
+                    opcion=-1;
+                    break;
+//            case 11 :
+//                    ePropietarioVacio(propietario, tampropietarios);
+//                    modificarPropietario(propietario, tampropietarios);
+//                    opcion=1;
+//                    break;
+               case 11 :
                     opcion=0;
                     break;
             }

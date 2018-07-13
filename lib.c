@@ -32,7 +32,7 @@
     void HardCodePropietario(ePropietario propietario[], int tampropietarios){
         int id[20] = {1015,1014,1004,1003,1006};
         char nombre[][25]= {"Mariana","Mauro  ","Laura  ","Vanesa ","Gustavo"};
-        char domicilio[][25] = {"2809454","25978654","2287466","12941598","9619629"};
+        char domicilio[][25] = {"Rivadavia","Angel gallardo","Corrientes","Pringles","Avda. Libertador"};
         char nroTarjeta[][25] = {"1700 1700","4000 4000","4500 4500","6400 6400","2400 2400"};
         int estado[20] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
         int i;
@@ -121,7 +121,7 @@
         printf("\n\t\t id    nombre    Domicilio   nrotarjeta\n");
         for(i=0; i<tampropietario; i++){
             if(propietario[i].estado == 1){
-                 printf("\n\t\t%d   %5s    %8s   %8s ", propietario[i].idPropietario, propietario[i].nombre, propietario[i].domicilio, propietario[i].nroTarjeta);
+                 printf("\n\t\t%d %10s %20s %10s ", propietario[i].idPropietario, propietario[i].nombre, propietario[i].domicilio, propietario[i].nroTarjeta);
 //                 printf("\n\t\t%1d         %1s", propietario[i].idPropietario, propietario[i].nombre);
             }
         }

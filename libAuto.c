@@ -5,6 +5,35 @@
     #include "lib.h"
     #include "libAutos.h"
 
+
+
+
+
+    void HardCodeFactura(eFactura factura[], int tamfactura){
+        char patente[][25] = {"ABD123","DWQ350","PDC990","DBF890","AAA666"};
+        int posAuto[20]= {0,1,2,3,4};
+        int posPropietario[20] = {1015,1014,1003,1004,1006};
+        int estadia[20]= {6,2,8,5,12};
+        int valorHora[20]= {150,175,200,250,250};
+        int total[20] = {900,350,1600,1000,3000};
+        int estado[20] = {2,2,2,2,2};
+
+        int i;
+         for(i=0; i<tamfactura; i++){
+            factura[i].estado = 0;
+        }
+        for(i=0; i<5; i++){
+            strcpy(factura[i].patente, patente[i]);
+            factura[i].posAuto = posAuto[i];
+            factura[i].posPropietario = posPropietario[i];
+            factura[i].estadia = estadia[i];
+            factura[i].valorHora = valorHora[i];
+            factura[i].total = total[i];
+            factura[i].estado = estado[i];
+        }
+    }
+
+
     int autoLibre(eAutos buscar[], int registros){
         int posicion = -1;
         int i;
@@ -51,7 +80,7 @@
      void HardCodeAutos(eAutos autos[], int tamautos){
         int id[20]= {0,1,2,3,4};
         int idPropietario[20] = {1015,1014,1003,1004,1006};
-        char marca[][25]= {"BMW        ","AUDI       ","ALPHA_ROMEO","TOYOTA     ","OTROS      "};
+        char marca[][25]= {"BMW        ","AUDI       ","ALPHA_ROMEO","FERRARI    ","OTROS      "};
         char patente[][25] = {"ABD123","DWQ350","PDC990","DBF890","AAA666"};
         int estado[20] = {1,1,1,1,1};
         int i;
@@ -66,7 +95,7 @@
             autos[i].estado = estado[i];
         }
     }
-
+/*
     void HardCodeFactura(eFactura factura[], int tamfactura){
         char patente[][25] = {"ABD123","DWQ350","PDC990"};
         int posAuto[20]= {0,1,2};
@@ -90,7 +119,7 @@
         }
     }
 
-
+*/
 
     int eAutosVacio(eAutos autos[], int tamautos){
         int vacio = 0;
@@ -186,7 +215,7 @@
                 printf("\n\t\t%s           %s         %d      %d ", autos[i].patente ,autos[i].marca ,autos[i].idAutos,autos[i].idPropietario );
             }
         }
-               printf("\n\n\n\n\n.");
+               printf("\n\n\n\n.");
         system("pause");
     }
      void mostrarAutosEstacionados(eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
@@ -194,11 +223,11 @@
         printf("\n\t-------------------------------------------------------");
         printf("\n\t\t   Marca           Patente\n");
         for(i=0; i<tamfactura; i++){
-            if(factura[i].estado == 1){
-                 printf("\n\t\t%10s %15s", factura[i].patente, autos[i].marca);
+            if(autos[i].estado == 1){
+                 printf("\n\t\t%10s %15s", autos[i].patente, autos[i].marca);
             }
         }
-        printf("\n\n\n\n\n.");
+        printf("\n\n.");
      }
 
     void mostrarRecaudacion(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
@@ -313,7 +342,136 @@ void *ingresoDatoChar1(char *txt, char *nombre){
             valor=200;
         }else {
             valor=250;
-            }
+        }
     return valor ;
     }
 
+    void recaudacionPorMarca(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura) {
+        int i;
+        float total_ALPHA_ROMEO=0;
+        float total_FERRARI=0;
+        float total_OTROS=0;
+        float total_AUDI=0;
+        float totalGeneral=0;
+        system("cls");
+        printf("\t --------------------------------------------------------------\n");
+        printf("\t|                  Listado por marca -version 1.0              |\n");
+        printf("\t --------------------------------------------------------------\n");
+        printf("\n\t\t    Marca                    Importe    \n");
+            for(i=0; i<tamfactura; i++){
+                if(factura[i].estado == 2){
+                    if (strcmp(autos[i].marca,"ALPHA_ROMEO")==0) {
+                        total_ALPHA_ROMEO+=factura[i].total;
+                    }else if (strcmp(autos[i].marca,"FERRARI    ")==0) {
+                        total_FERRARI+=factura[i].total;
+                    }else if(strcmp(autos[i].marca,"AUDI       ")==0) {
+                        total_AUDI+=factura[i].total;
+                    }else {
+                        total_OTROS+=factura[i].total;
+                    }
+  //              printf("\n\t\t%10s %15s %10f", factura[i].patente, autos[i].marca, factura[i].total);
+            }
+        }
+        totalGeneral+=total_ALPHA_ROMEO+total_FERRARI+total_AUDI+total_OTROS;
+        printf("\n\t\tALPHA ROMEO %25f", total_ALPHA_ROMEO);
+        printf("\n\t\tFERRARI     %25f", total_FERRARI);
+        printf("\n\t\tAUDI        %25f", total_AUDI);
+        printf("\n\t\tOTROS       %25f", total_OTROS);
+        printf("\n\t-------------------------------------------------------");
+        printf("\n\t\tTotal recaudacion :   %15f", totalGeneral);
+        printf("\n\t-------------------------------------------------------");
+        printf("\n\n\n\n\n.");
+                system("pause");
+     }
+
+void listarPorIdPropietario(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos, int id){
+            int i;
+            int salir;
+            int flagPropietario;
+            system("cls");
+            printf("\t-------------------------------------------------------");
+            printf("\n\t|             Listado  de propietario                    |");
+            printf("\n\t-------------------------------------------------------");
+ //           id=ePropietarioVacio(propietario, tampropietarios);
+            if(id==0){
+                printf("\n\n\n\n\n\n\n\n\n\n\n\n\tNo hay propietario para mostrar - archivo vacio ");
+                system("pause");
+            }else{
+                ordenarPropietarioNombre(propietario, tampropietarios);
+                mostrarListaPropietario(propietario, tampropietarios);
+                printf("\n\n\n\t\t Selecione un propietario a listar - 0 salir : ");
+                scanf("%d", &id);
+                if(id!=0){
+                    for(i=0; i<tampropietarios; i++){
+                        if(propietario[i].idPropietario == id){
+                            propietario[i].estado=0;
+//                             printf("\n\tEl propietario %d   -  ",id);
+//                            system("pause");
+                            listadoAutosPorIdPropietario(propietario, tampropietarios, autos, tamautos, i);
+                            flagPropietario=1;
+                            salir=-1;
+                            break;
+                        }
+                    }
+                    if (flagPropietario!=1){
+                            printf("\n\tEl propietario %d no exsiste  -  ",id);
+                            system("pause");
+  //                          break;
+                    }
+
+                }else{
+                        salir=-1;
+                }
+            }
+            }
+
+void listadoAutosPorIdPropietario(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos, int x){
+
+    int i;
+    int flag=0;
+    system("cls");
+    printf("\t-------------------------------------------------------");
+    printf("\n\t|             Listado  de propietario                    |");
+    printf("\n\t-------------------------------------------------------");
+    printf("\n\n\t\tNombre propietario : %s",propietario[x].nombre);
+    printf("\n\n\t-------------------------------------------------------");
+        printf("\n\t\tMarca            Patente    \n");
+    printf("\n\t-------------------------------------------------------");
+    for(i=0; i<tamautos; i++){
+//            printf("\n\t\t%5d    %8d", autos[i].idPropietario, i);
+            if(autos[i].idPropietario == propietario[x].idPropietario){
+//                 printf("\n\t\t%5d    %8d", autos[i].idPropietario, id);
+                 printf("\n\t\t%6s    %8s", autos[i].marca, autos[i].patente);
+                 flag=1;
+        }
+    }
+    if(flag==0){
+         printf("\n\n\n\t\tNo tiene autos estacionados");
+    }
+
+    printf("\n\n\n\n\n.");
+
+    system("pause");
+
+     }
+    void listarPropietariosAudi(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos){
+    int i;
+    int flag=0;
+    system("cls");
+    printf("\t-------------------------------------------------------");
+    printf("\n\t|           Listado  de propietario  AUDI              |");
+    printf("\n\t-------------------------------------------------------\n");
+    for(i=0; i<tamautos; i++){
+            if (strcmp(autos[i].marca,"AUDI       ")==0){
+                 printf("\n\t\t%8s", propietario[i].nombre);
+                 flag=1;
+        }
+    }
+    if(flag==0){
+         printf("\n\n\n\t\tNo tiene hay proppietarios de AUDI");
+    }
+
+    printf("\n\n\n\n\n.");
+
+    system("pause");
+    }

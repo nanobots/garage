@@ -14,6 +14,7 @@
             printf("\t -------------------------------------------------------\n");
             printf("\t|                 Egreso de autos                       |\n");
             printf("\t -------------------------------------------------------\n");
+//mostrarListaAutos(autos, propietario,tamautos,tampropietarios);
             mostrarAutosEstacionados(autos, tamautos, factura, tamfactura);
             switch(flag){
                 case 0:
@@ -63,6 +64,7 @@
                 factura[auxFactura.posAuto].valorHora=valorHora;
                 factura[auxFactura.posAuto].total=total;
                 factura[auxFactura.posAuto].estado=2;
+                autos[auxFactura.posAuto].estado=2;
                 flag=7;
                 break;
             }

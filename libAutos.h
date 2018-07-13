@@ -17,6 +17,12 @@
     }eFactura;
 
 
+    void listarPorIdPropietario(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos, int id);
+    void HardCodeFactura(eFactura factura[], int tamfactura);
+   void listadoAutosPorIdPropietario(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos, int id);
+    void listarPropietariosAudi(ePropietario propietario[], int tampropietarios, eAutos autos[], int tamautos);
+
+
     int buscoAutos(eAutos[], int, int);
     /** \brief  intercala los datos cuando se ordenan
       *  \param  Estructura eAutos
@@ -90,8 +96,9 @@
 
       void mostrarAutosEstacionados(eAutos[], int, eFactura[], int);
 
-      void mostarRecaudacion(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura);
+      void mostrarRecaudacion(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura);
 
+    void recaudacionPorMarca(ePropietario propietario[], int tampropietarios,eAutos autos[], int tamautos, eFactura factura[], int tamfactura);
 
      /** \brief  ordena estructura por patente
       *  \param  Estructura eAutos

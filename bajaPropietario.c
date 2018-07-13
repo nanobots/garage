@@ -11,7 +11,7 @@
             salir=0;
             system("cls");
             printf("\t-------------------------------------------------------\n");
-            printf("\t|                    Baja de propietario                  |");
+            printf("\t|                    Baja de propietario                  |\n");
             printf("\t-------------------------------------------------------\n");
             ordenarPropietarioId(propietario, tampropietarios);
             mostrarListaPropietario(propietario, tampropietarios);
